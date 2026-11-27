@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Morning Edition — Friday 27 November 2026</title>
-<meta name="description" content="DJ Elky's daily Hacker News magazine: 10 stories picked for AI tools, creative software, dev tools, privacy and weird science.">
+<title>Morning Edition — Vendredi 27 novembre 2026</title>
+<meta name="description" content="Le magazine Hacker News quotidien de DJ Elky : 10 histoires choisies sur les outils IA, les logiciels créatifs, les outils de dev, la vie privée et la science bizarre.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,800&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -162,117 +162,121 @@ footer .big{font-family:var(--serif);font-weight:900;font-size:clamp(3rem,10vw,9
 footer .big em{color:var(--gold)}
 footer p{margin:1.4rem auto 0;font-size:1.1rem}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+.lang{position:fixed;top:14px;right:14px;z-index:50;background:#ffc857;color:#14110f;font-weight:900;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:.55rem 1rem;border-radius:999px;border:3px solid #14110f}
+.lang:hover{background:#fff}
 </style>
+<link rel="alternate" hreflang="en" href="2026-11-27-en.html">
 </head>
 <body>
+<a class="lang" href="2026-11-27-en.html" hreflang="en">English version →</a>
 
 <!-- COVER -->
 <header class="spread cover">
-  <div class="top"><span>Morning Edition · No. 1</span><span>Friday 27 November 2026</span><span>Curated for DJ Elky</span></div>
+  <div class="top"><span>Morning Edition · N° 1</span><span>Vendredi 27 novembre 2026</span><span>Sélectionné pour DJ Elky</span></div>
   <h1>Morning<br><em>Edition</em></h1>
-  <p style="font-size:1.4rem;max-width:44ch">Ten stories off the Hacker News front page, picked for AI tools, dev tools, creative software, privacy and weird science. No ads, no business fluff, one sound check per story.</p>
-  <nav class="lines" aria-label="Today's stories">
-    <a href="#s1"><span>01</span>AI is suddenly doing real mathematics</a>
-    <a href="#s2"><span class="badge">02 · ALERT</span>1Password's breach: vaults safe, phishing incoming</a>
-    <a href="#s3"><span>03 · FOR YOU</span>Postgres in one binary, no Docker</a>
-    <a href="#s4"><span>04 · FOR YOU</span>Ubuntu's slow kernel patches</a>
-    <a href="#s5"><span>05</span>Why your phone lens is a physics miracle</a>
-    <a href="#s6"><span>06 · FOR YOU</span>Intel One Mono, a font for your IDE</a>
-    <a href="#s7"><span>07</span>80 UI style guides, 1980 to today</a>
-    <a href="#s8"><span>08</span>Three Linux browsers in one tab</a>
-    <a href="#s9"><span>09</span>Models vs Google's code golfers</a>
-    <a href="#s10"><span>10 · FOR YOU</span>AMD GPU: local LLMs up to 86% faster</a>
+  <p style="font-size:1.4rem;max-width:44ch">Dix histoires de la une de Hacker News, choisies pour les outils IA, les outils de dev, les logiciels créatifs, la vie privée et la science bizarre. Zéro pub, zéro blabla business, un sound check par histoire.</p>
+  <nav class="lines" aria-label="Les histoires du jour">
+    <a href="#s1"><span>01</span>L'IA fait soudain de vraies mathématiques</a>
+    <a href="#s2"><span class="badge">02 · ALERTE</span>Faille chez 1Password : coffres saufs, phishing en approche</a>
+    <a href="#s3"><span>03 · POUR TOI</span>Postgres en un seul binaire, sans Docker</a>
+    <a href="#s4"><span>04 · POUR TOI</span>Les correctifs noyau lents d'Ubuntu</a>
+    <a href="#s5"><span>05</span>Pourquoi l'objectif de ton téléphone est un miracle de physique</a>
+    <a href="#s6"><span>06 · POUR TOI</span>Intel One Mono, une police pour ton IDE</a>
+    <a href="#s7"><span>07</span>80 guides de style d'interface, de 1980 à aujourd'hui</a>
+    <a href="#s8"><span>08</span>Trois navigateurs Linux dans un seul onglet</a>
+    <a href="#s9"><span>09</span>Les modèles contre les golfeurs de code de Google</a>
+    <a href="#s10"><span>10 · POUR TOI</span>GPU AMD : LLM locaux jusqu'à 86 % plus rapides</a>
   </nav>
 </header>
 
 <!-- 01 HERO -->
 <section class="spread s1" id="s1">
   <div class="num" aria-hidden="true">01</div>
-  <div class="kicker">Big Brains · 1,899 points on HN</div>
-  <h2>The robots are doing maths now.</h2>
-  <div class="dek">Scott Aaronson says a wave of AI-generated results just changed theoretical computer science.</div>
-  <p>In a post that took over the front page, Aaronson reacts to a pile of claimed proofs from OpenAI, Anthropic, Google and others, several backed by Lean certificates. His read: AI is now climbing towards P ≠ NP, and a proof may not be far off.</p>
+  <div class="kicker">Grosses têtes · 1 899 points sur HN</div>
+  <h2>Les robots font des maths, maintenant.</h2>
+  <div class="dek">Scott Aaronson affirme qu'une vague de résultats générés par IA vient de bousculer l'informatique théorique.</div>
+  <p>Dans un billet qui a envahi la une, Aaronson réagit à un tas de preuves annoncées par OpenAI, Anthropic, Google et d'autres, plusieurs accompagnées de certificats Lean. Sa lecture : l'IA grimpe maintenant vers P ≠ NP, et une preuve pourrait ne plus être très loin.</p>
   <div class="claims">
-    <div><strong>VP ≠ VNP</strong>Claimed by both OpenAI and Anthropic.</div>
-    <div><strong>ω = 9/4</strong>OpenAI's claimed matrix multiplication exponent.</div>
-    <div><strong>N·√log N</strong>Claimed Fourier transform gate count, beating the FFT.</div>
+    <div><strong>VP ≠ VNP</strong>Annoncé à la fois par OpenAI et Anthropic.</div>
+    <div><strong>ω = 9/4</strong>Exposant de la multiplication matricielle annoncé par OpenAI.</div>
+    <div><strong>N·√log N</strong>Nombre de portes annoncé pour la transformée de Fourier, battant la FFT.</div>
   </div>
-  <p>These are claims in a blog post, not peer review. Aaronson himself says full human understanding could take years.</p>
-  <div class="meta"><span>1,738 comments</span><span>scottaaronson.blog</span></div>
-  <div class="links"><a class="btn" href="https://scottaaronson.blog/?p=10379">Read the post</a><a class="btn" href="https://news.ycombinator.com/item?id=50646108">HN thread</a></div>
+  <p>Ce sont des annonces dans un billet de blog, pas une revue par les pairs. Aaronson dit lui-même que la compréhension humaine complète pourrait prendre des années.</p>
+  <div class="meta"><span>1 738 commentaires</span><span>scottaaronson.blog</span></div>
+  <div class="links"><a class="btn" href="https://scottaaronson.blog/?p=10379">Lire l'article</a><a class="btn" href="https://news.ycombinator.com/item?id=50646108">Fil HN</a></div>
 </section>
 
 <!-- 02 ROSE ALERT -->
 <section class="spread s2" id="s2">
   <div class="num" aria-hidden="true">02</div>
   <div class="wrap">
-    <div class="stamp">Security alert</div>
-    <div class="kicker">Privacy · 1,613 points</div>
-    <h2>1Password got breached. Your vault didn't.</h2>
-    <div class="dek">An attacker got into an employee's GitHub account and pushed malicious code to backend services.</div>
+    <div class="stamp">Alerte sécurité</div>
+    <div class="kicker">Vie privée · 1 613 points</div>
+    <h2>1Password s'est fait pirater. Pas ton coffre.</h2>
+    <div class="dek">Un attaquant est entré dans le compte GitHub d'un employé et a poussé du code malveillant vers des services backend.</div>
     <ul>
-      <li>Names, sign-in emails, user IDs, public keys and some invitation or recovery tokens were exposed for a subset of users.</li>
-      <li>Vault contents, the keys protecting them and the apps were not touched, says 1Password.</li>
-      <li>No action required, but expect phishing about invitations or account recovery. They will never ask for your password or Secret Key.</li>
+      <li>Noms, e-mails de connexion, identifiants, clés publiques et certains jetons d'invitation ou de récupération ont été exposés pour une partie des utilisateurs.</li>
+      <li>Le contenu des coffres, les clés qui les protègent et les apps n'ont pas été touchés, d'après 1Password.</li>
+      <li>Aucune action requise, mais attends-toi à du phishing sur des invitations ou la récupération de compte. Ils ne te demanderont jamais ton mot de passe ni ta Secret Key.</li>
     </ul>
-    <div class="foryou"><b><span>Applies to you?</span></b>If you or a client use 1Password: treat any "account recovery" email this week as hostile, and report it to support@1password.com.</div>
-    <div class="meta"><span>696 comments</span><span>1password.com</span></div>
-    <div class="links"><a class="btn" href="https://1password.com/blog/update-on-nov-2026-security-incident">Read the update</a><a class="btn" href="https://news.ycombinator.com/item?id=50644817">HN thread</a></div>
+    <div class="foryou"><b><span>Ça te concerne ?</span></b>Si toi ou un client utilisez 1Password : considère tout e-mail de « récupération de compte » cette semaine comme hostile, et signale-le à support@1password.com.</div>
+    <div class="meta"><span>696 commentaires</span><span>1password.com</span></div>
+    <div class="links"><a class="btn" href="https://1password.com/blog/update-on-nov-2026-security-incident">Lire la mise à jour</a><a class="btn" href="https://news.ycombinator.com/item?id=50644817">Fil HN</a></div>
   </div>
 </section>
 
 <!-- 03 TERMINAL -->
 <section class="spread s3" id="s3">
   <div class="num" aria-hidden="true">03_<span class="cursor"></span></div>
-  <div class="kicker">Dev tools · 264 points</div>
-  <h2>minipg: PostgreSQL as a single executable.</h2>
-  <div class="dek">No server to configure, no Docker. One folder holds the whole database.</div>
+  <div class="kicker">Outils de dev · 264 points</div>
+  <h2>minipg : PostgreSQL en un seul exécutable.</h2>
+  <div class="dek">Aucun serveur à configurer, pas de Docker. Un dossier contient toute la base.</div>
   <div class="term">
-    <div class="c"># a .pgdb folder = data + config + Postgres version</div>
+    <div class="c"># un dossier .pgdb = données + config + version de Postgres</div>
     <div class="p">minipg app.pgdb "select 1"</div>
     <div class="p">minipg run app.pgdb -- npm start</div>
     <div class="p">minipg run test.pgdb -- go test ./...</div>
-    <div class="c"># server starts on demand, stops when idle</div>
+    <div class="c"># le serveur démarre à la demande, s'arrête au repos</div>
   </div>
-  <p>It embeds the postgres:18-alpine image and runs it in a tiny machine, so tools like psql start in about 90 ms. Runs on Linux and Apple Silicon.</p>
-  <p>Caveat from the author: it is early, about 2x slower than native, and not for data you can't recreate.</p>
-  <div class="foryou"><b><span>For you</span></b>Ideal for disposable Postgres in Java integration tests or CI. Swap the `go test` line for `mvn test` and try it.</div>
-  <div class="meta"><span>42 comments</span><span>progrium.github.io</span></div>
-  <div class="links"><a class="btn" href="https://progrium.github.io/minipg/">Open minipg</a><a class="btn" href="https://news.ycombinator.com/item?id=50650892">HN thread</a></div>
+  <p>Il embarque l'image postgres:18-alpine et la fait tourner dans une toute petite machine, donc des outils comme psql démarrent en environ 90 ms. Fonctionne sous Linux et Apple Silicon.</p>
+  <p>Avertissement de l'auteur : c'est jeune, environ 2x plus lent que le natif, et pas pour des données que tu ne peux pas recréer.</p>
+  <div class="foryou"><b><span>Pour toi</span></b>Idéal pour un Postgres jetable dans tes tests d'intégration Java ou en CI. Remplace la ligne `go test` par `mvn test` et essaie.</div>
+  <div class="meta"><span>42 commentaires</span><span>progrium.github.io</span></div>
+  <div class="links"><a class="btn" href="https://progrium.github.io/minipg/">Ouvrir minipg</a><a class="btn" href="https://news.ycombinator.com/item?id=50650892">Fil HN</a></div>
 </section>
 
 <!-- 04 MIDNIGHT -->
 <section class="spread s4" id="s4">
   <div class="num" aria-hidden="true">04</div>
-  <div class="kicker">Security · 398 points</div>
-  <h2>Ubuntu is late with kernel fixes.</h2>
-  <div class="dek">Hanno Böck wants severe kernel patches in hours. Ubuntu, he says, is taking days or weeks.</div>
+  <div class="kicker">Sécurité · 398 points</div>
+  <h2>Ubuntu est en retard sur les correctifs noyau.</h2>
+  <div class="dek">Hanno Böck veut des correctifs noyau critiques en quelques heures. Ubuntu, dit-il, met des jours ou des semaines.</div>
   <div class="cves">
-    <div><code>CVE-2026-99288</code>Remote TCP memory corruption, no Ubuntu fix 9 days after publication.</div>
-    <div><code>CVE-2026-99312</code>KVM host escape on AMD, still unfixed on Ubuntu.</div>
-    <div><code>CVE-2026-98432</code>Took Ubuntu weeks, possibly exploited in the wild.</div>
+    <div><code>CVE-2026-99288</code>Corruption mémoire TCP à distance, aucun correctif Ubuntu 9 jours après la publication.</div>
+    <div><code>CVE-2026-99312</code>Évasion de l'hôte KVM sur AMD, toujours non corrigée sur Ubuntu.</div>
+    <div><code>CVE-2026-98432</code>Plusieurs semaines pour Ubuntu, possiblement exploitée dans la nature.</div>
   </div>
-  <p>His deeper point is that backporting patches onto an old kernel is fragile, and he prefers distros that track longterm kernels.</p>
-  <div class="foryou"><b><span>For you</span></b>Running Ubuntu servers or a Java box on one? Check your kernel version and watch for updates to the TCP fix.</div>
-  <div class="meta"><span>241 comments</span><span>openwall.com</span></div>
-  <div class="links"><a class="btn" href="https://www.openwall.com/lists/oss-security/2026/11/25/9">Read the post</a><a class="btn" href="https://news.ycombinator.com/item?id=50647181">HN thread</a></div>
+  <p>Son point de fond : rétroporter des correctifs sur un vieux noyau est fragile, et il préfère les distributions qui suivent les noyaux longue durée.</p>
+  <div class="foryou"><b><span>Pour toi</span></b>Tu as des serveurs Ubuntu, ou une machine Java dessus ? Vérifie ta version de noyau et surveille la mise à jour du correctif TCP.</div>
+  <div class="meta"><span>241 commentaires</span><span>openwall.com</span></div>
+  <div class="links"><a class="btn" href="https://www.openwall.com/lists/oss-security/2026/11/25/9">Lire l'article</a><a class="btn" href="https://news.ycombinator.com/item?id=50647181">Fil HN</a></div>
 </section>
 
 <!-- 05 ACADEMIC -->
 <section class="spread s5" id="s5">
   <div class="page">
     <div class="num">№ 5<sup>†</sup></div>
-    <div class="kicker">Weird science · 26 points</div>
-    <h2>The Engineering of Smartphone Cameras</h2>
+    <div class="kicker">Science bizarre · 26 points</div>
+    <h2>L'ingénierie des appareils photo de smartphone</h2>
     <div class="rule"></div>
     <div class="cols">
-      <p>A DSLR lens is typically 50 to 150 millimetres long. The lens in your phone lives in roughly eight, with the sensor less than ten millimetres behind the first optical surface. Everything else in this essay follows from that constraint.</p>
-      <p>Plastic lenses make field curvature hard to fix, because the Petzval sum depends on element power and refractive index, and plastics offer very few indices to choose from. Aspheres cannot change it. That is why some designs sneak in a glass element or a rare in-between plastic.</p>
-      <p>The 5x telephoto cheats the geometry: its focal length is about 17 mm, folded through a rhomboid prism so light bounces four times. Moulded aspheres hold form errors near a tenth of a micron, yet are touchier about tilt and decentre.</p>
+      <p>Un objectif de reflex fait typiquement 50 à 150 millimètres de long. Celui de ton téléphone vit dans environ huit, avec le capteur à moins de dix millimètres derrière la première surface optique. Tout le reste de cet essai découle de cette contrainte.</p>
+      <p>Les lentilles en plastique rendent la courbure de champ difficile à corriger, car la somme de Petzval dépend de la puissance des éléments et de l'indice de réfraction, et les plastiques offrent très peu d'indices. Les asphériques n'y peuvent rien. C'est pourquoi certains designs glissent un élément en verre ou un plastique intermédiaire rare.</p>
+      <p>Le télé 5x triche avec la géométrie : sa focale est d'environ 17 mm, repliée par un prisme rhomboïdal pour que la lumière rebondisse quatre fois. Les asphériques moulées tiennent des erreurs de forme proches du dixième de micron, mais sont plus sensibles à l'inclinaison et au décentrage.</p>
     </div>
-    <div class="fn">† 5x module ≈ 120 mm equivalent, 20° field of view. Ultra-wide ≈ 13 mm, 120°.</div>
-    <div class="meta"><span>11 comments</span><span>pencilofrays.com</span></div>
-    <div class="links"><a class="btn" href="https://www.pencilofrays.com/smartphone-lens/">Read the essay</a><a class="btn" href="https://news.ycombinator.com/item?id=50644839">HN thread</a></div>
+    <div class="fn">† Module 5x ≈ 120 mm équivalent, champ de 20°. Ultra grand-angle ≈ 13 mm, 120°.</div>
+    <div class="meta"><span>11 commentaires</span><span>pencilofrays.com</span></div>
+    <div class="links"><a class="btn" href="https://www.pencilofrays.com/smartphone-lens/">Lire l'essai</a><a class="btn" href="https://news.ycombinator.com/item?id=50644839">Fil HN</a></div>
   </div>
 </section>
 
@@ -281,83 +285,83 @@ footer p{margin:1.4rem auto 0;font-size:1.1rem}
   <div class="num" aria-hidden="true">06</div>
   <div class="grid">
     <div>
-      <div class="kicker">Creative · dev tools · 382 points</div>
-      <h2>A free font built for tired eyes.</h2>
-      <div class="dek">Intel One Mono, designed with Frere-Jones Type and tested with low-vision and blind developers.</div>
-      <p>Four weights with italics, over 200 Latin languages, programming ligatures behind a stylistic set, and open-source under the SIL OFL.</p>
-      <div class="foryou"><b><span>For you</span></b>In IntelliJ: File, Settings, Editor, Font. Pick "Intel One Mono" and judge it on a real Java file.</div>
-      <div class="meta"><span>214 comments</span><span>github.com/intel</span></div>
-      <div class="links"><a class="btn" href="https://github.com/intel/intel-one-mono">Get the font</a><a class="btn" href="https://news.ycombinator.com/item?id=50653667">HN thread</a></div>
+      <div class="kicker">Créatif · outils de dev · 382 points</div>
+      <h2>Une police gratuite pour yeux fatigués.</h2>
+      <div class="dek">Intel One Mono, conçue avec Frere-Jones Type et testée avec des développeurs malvoyants et aveugles.</div>
+      <p>Quatre graisses avec italiques, plus de 200 langues latines, des ligatures de programmation derrière un jeu stylistique, et open source sous licence SIL OFL.</p>
+      <div class="foryou"><b><span>Pour toi</span></b>Dans IntelliJ : File, Settings, Editor, Font. Choisis « Intel One Mono » et juge-la sur un vrai fichier Java.</div>
+      <div class="meta"><span>214 commentaires</span><span>github.com/intel</span></div>
+      <div class="links"><a class="btn" href="https://github.com/intel/intel-one-mono">Télécharger la police</a><a class="btn" href="https://news.ycombinator.com/item?id=50653667">Fil HN</a></div>
     </div>
-    <div class="specimen" aria-hidden="true">{ 0O 1lI } =&gt;<small>CAN YOU TELL THEM APART?</small></div>
+    <div class="specimen" aria-hidden="true">{ 0O 1lI } =&gt;<small>TU LES DISTINGUES ?</small></div>
   </div>
 </section>
 
 <!-- 07 TIMELINE -->
 <section class="spread s7" id="s7">
   <div class="num" aria-hidden="true">07</div>
-  <div class="kicker">Creative software · 354 points</div>
-  <h2>Every UI rulebook, preserved.</h2>
-  <div class="dek">Marcin Wichary's collection of about 80 interface guidelines, from Apple's Lisa to today.</div>
+  <div class="kicker">Logiciels créatifs · 354 points</div>
+  <h2>Tous les manuels d'interface, préservés.</h2>
+  <div class="dek">La collection de Marcin Wichary : environ 80 guides d'interface, de l'Apple Lisa à aujourd'hui.</div>
   <div class="tl">
-    <div><strong>1980</strong>Apple Lisa, the earliest entry</div>
-    <div><strong>~80</strong>documents, many as PDF</div>
-    <div><strong>CDE · BeOS · Newton</strong>Unix desktops, BeOS (never finished) and PDAs</div>
-    <div><strong>Today</strong>iOS, Android, Windows</div>
+    <div><strong>1980</strong>Apple Lisa, la plus ancienne</div>
+    <div><strong>~80</strong>documents, souvent en PDF</div>
+    <div><strong>CDE · BeOS · Newton</strong>Bureaux Unix, BeOS (jamais finalisé) et PDA</div>
+    <div><strong>Aujourd'hui</strong>iOS, Android, Windows</div>
   </div>
-  <p>Pure inspiration for anyone building creative tools or audio software interfaces. Zip download included.</p>
-  <div class="meta"><span>72 comments</span><span>aresluna.org</span></div>
-  <div class="links"><a class="btn" href="https://aresluna.org/ui-style-guides/">Browse the archive</a><a class="btn" href="https://news.ycombinator.com/item?id=50649834">HN thread</a></div>
+  <p>De l'inspiration pure pour qui construit des outils créatifs ou des interfaces de logiciels audio. Archive zip incluse.</p>
+  <div class="meta"><span>72 commentaires</span><span>aresluna.org</span></div>
+  <div class="links"><a class="btn" href="https://aresluna.org/ui-style-guides/">Parcourir l'archive</a><a class="btn" href="https://news.ycombinator.com/item?id=50649834">Fil HN</a></div>
 </section>
 
 <!-- 08 TRIO -->
 <section class="spread s8" id="s8">
   <div class="num" aria-hidden="true">08</div>
-  <div class="kicker">Weird web · Show HN · 67 points</div>
-  <h2>Three browsers. One tab. Zero installs.</h2>
-  <div class="dek">"Side by Side" loads the same URL in three browsers at once, each running in a Linux VM inside your tab.</div>
+  <div class="kicker">Web bizarre · Show HN · 67 points</div>
+  <h2>Trois navigateurs. Un onglet. Zéro installation.</h2>
+  <div class="dek">« Side by Side » charge la même URL dans trois navigateurs à la fois, chacun tournant dans une VM Linux à l'intérieur de ton onglet.</div>
   <div class="trio">
-    <div>Firefox<span>Linux VM</span></div>
-    <div>Chromium<span>Linux VM</span></div>
-    <div>Epiphany<span>Linux VM</span></div>
+    <div>Firefox<span>VM Linux</span></div>
+    <div>Chromium<span>VM Linux</span></div>
+    <div>Epiphany<span>VM Linux</span></div>
   </div>
-  <p style="margin-top:2.6rem">Handy for cross-browser checks of your own web pages without leaving the page. The site doesn't say how the virtualization works, so I can't tell you how fast it runs.</p>
-  <div class="meta"><span>18 comments</span><span>michidk.github.io</span></div>
-  <div class="links"><a class="btn" href="https://michidk.github.io/sidebyside/">Try it</a><a class="btn" href="https://news.ycombinator.com/item?id=50656036">HN thread</a></div>
+  <p style="margin-top:2.6rem">Pratique pour tester tes propres pages web sur plusieurs navigateurs sans quitter la page. Le site n'explique pas comment fonctionne la virtualisation, donc je ne peux pas te dire à quelle vitesse ça tourne.</p>
+  <div class="meta"><span>18 commentaires</span><span>michidk.github.io</span></div>
+  <div class="links"><a class="btn" href="https://michidk.github.io/sidebyside/">L'essayer</a><a class="btn" href="https://news.ycombinator.com/item?id=50656036">Fil HN</a></div>
 </section>
 
 <!-- 09 GRID -->
 <section class="spread s9" id="s9">
   <div class="num" aria-hidden="true">09</div>
-  <div class="kicker">AI tools · 455 points</div>
-  <h2>Code golf: frontier models vs Google's 2015 golfers.</h2>
-  <div class="dek">A benchmark of 32 problems across 8 languages. HN says GPT-6.2 Astra is the first to beat the Googlers' records.</div>
+  <div class="kicker">Outils IA · 455 points</div>
+  <h2>Code golf : les modèles de pointe contre les golfeurs de Google de 2015.</h2>
+  <div class="dek">Un benchmark de 32 problèmes dans 8 langages. Selon HN, GPT-6.2 Astra est le premier à battre les records des Googlers.</div>
   <div class="cells" aria-hidden="true" id="cells"></div>
-  <p>256 cells, one per problem and language. The leaderboard loads with JavaScript, so I couldn't verify the numbers. Check the page before quoting the headline.</p>
-  <div class="meta"><span>128 comments</span><span>bjin.github.io</span></div>
-  <div class="links"><a class="btn" href="https://bjin.github.io/go-codegolf-benchmark/#leaderboard">Open the leaderboard</a><a class="btn" href="https://news.ycombinator.com/item?id=50601280">HN thread</a></div>
+  <p>256 cases, une par problème et par langage. Le classement se charge en JavaScript, donc je n'ai pas pu vérifier les chiffres. Regarde la page avant de citer le titre.</p>
+  <div class="meta"><span>128 commentaires</span><span>bjin.github.io</span></div>
+  <div class="links"><a class="btn" href="https://bjin.github.io/go-codegolf-benchmark/#leaderboard">Ouvrir le classement</a><a class="btn" href="https://news.ycombinator.com/item?id=50601280">Fil HN</a></div>
 </section>
 
 <!-- 10 BIG STAT -->
 <section class="spread s10" id="s10">
   <div class="num" aria-hidden="true">10</div>
-  <div class="kicker">AI tools · local LLMs · 92 points</div>
+  <div class="kicker">Outils IA · LLM locaux · 92 points</div>
   <div class="stat">+86<sup>%</sup></div>
-  <div class="arrow">prefill speed, 700 to 1,300 tokens per second</div>
-  <h2>AMD-specific patches make llama.cpp fly.</h2>
+  <div class="arrow">vitesse de prefill, de 700 à 1 300 tokens par seconde</div>
+  <h2>Des correctifs spécifiques AMD font voler llama.cpp.</h2>
   <div class="pair">
-    <div><b>35 → 55</b>tokens/s generating, +57%</div>
-    <div><b>1 card</b>tested: an AMD R9700 in an eGPU</div>
+    <div><b>35 → 55</b>tokens/s en génération, +57 %</div>
+    <div><b>1 carte</b>testée : une AMD R9700 en eGPU</div>
   </div>
-  <p>The author's numbers are for one setup running a 27B model, "YMMV". They ran a pre-built ROCm container with Podman instead of building from source.</p>
-  <div class="foryou"><b><span>For you</span></b>If your Radeon is idle during local LLM work, the Podman command on the page is a 5-minute experiment.</div>
-  <div class="meta"><span>28 comments</span><span>devnull.land</span></div>
-  <div class="links"><a class="btn" href="https://devnull.land/amd-specific-llama-cpp">Read the write-up</a><a class="btn" href="https://news.ycombinator.com/item?id=50657265">HN thread</a></div>
+  <p>Les chiffres de l'auteur valent pour une seule configuration faisant tourner un modèle 27B, « YMMV ». Il a utilisé un conteneur ROCm précompilé avec Podman plutôt que de compiler depuis les sources.</p>
+  <div class="foryou"><b><span>Pour toi</span></b>Si ta Radeon fait la sieste pendant tes LLM locaux, la commande Podman de la page est une expérience de 5 minutes.</div>
+  <div class="meta"><span>28 commentaires</span><span>devnull.land</span></div>
+  <div class="links"><a class="btn" href="https://devnull.land/amd-specific-llama-cpp">Lire l'article de blog</a><a class="btn" href="https://news.ycombinator.com/item?id=50657265">Fil HN</a></div>
 </section>
 
 <footer>
-  <div class="big">That's a <em>wrap.</em></div>
-  <p>Morning Edition No. 1 · Friday 27 November 2026. Next set drops tomorrow at 7:00 Paris time. 🎧</p>
+  <div class="big">C'est dans la <em>boîte.</em></div>
+  <p>Morning Edition n° 1 · Vendredi 27 novembre 2026. Prochain set demain à 7 h, heure de Paris. 🎧</p>
 </footer>
 
 <script>

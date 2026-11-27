@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morning Edition — Friday 27 November 2026</title>
+<meta name="description" content="DJ Elky's daily Hacker News magazine: 10 stories picked for AI tools, creative software, dev tools, privacy and weird science.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,800&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14110f; --paper:#f4ecdc; --rose:#ff4d6d; --rose-bg:#ffd6dc; --mid:#0b1530; --gold:#ffc857;
+  --mint:#c9f0dc; --mustard:#ffd23f; --lilac:#d9ccff; --blue:#1f3bff; --orange:#ff6a2b;
+  --serif:'Fraunces',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+  --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{font-size:20px;scroll-behavior:smooth}
+body{font-family:var(--sans);font-size:1rem;line-height:1.55;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.spread{position:relative;min-height:100vh;padding:clamp(28px,6vw,96px);overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.kicker{font-family:var(--sans);font-weight:900;text-transform:uppercase;letter-spacing:.14em;font-size:.95rem}
+h2{font-family:var(--serif);font-weight:900;line-height:1;letter-spacing:-.02em;font-size:clamp(2.6rem,7.5vw,7rem);font-variation-settings:'opsz' 144}
+.dek{font-family:var(--serif);font-weight:300;font-size:clamp(1.3rem,2.2vw,1.9rem);line-height:1.3;max-width:34ch;margin-top:1.2rem}
+p{font-size:1.05rem;max-width:58ch;margin-top:1rem}
+.meta{font-weight:700;font-size:.95rem;letter-spacing:.04em;margin-top:1.4rem;display:flex;gap:1.4rem;flex-wrap:wrap}
+.links{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.6rem}
+.btn{font-weight:900;text-transform:uppercase;letter-spacing:.08em;font-size:.95rem;padding:.8rem 1.3rem;border:3px solid currentColor;text-decoration:none;border-radius:999px;transition:transform .15s}
+.btn:hover{transform:translateY(-3px)}
+.foryou{margin-top:1.6rem;display:inline-flex;gap:.9rem;align-items:flex-start;max-width:58ch;padding:1rem 1.2rem;border:3px solid currentColor;border-radius:14px;font-weight:500;font-size:1.05rem}
+.foryou b{font-weight:900;text-transform:uppercase;letter-spacing:.1em;font-size:.95rem;background:currentColor;padding:.2rem .6rem;border-radius:6px;white-space:nowrap}
+.foryou b span{color:var(--bg,#fff)}
+.num{font-family:var(--serif);font-weight:900;line-height:.8;user-select:none;pointer-events:none}
+
+/* MASTHEAD */
+.cover{background:var(--ink);color:var(--paper);min-height:100vh}
+.cover .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.95rem}
+.cover h1{font-family:var(--serif);font-weight:900;font-variation-settings:'opsz' 144;font-size:clamp(4.2rem,17vw,17rem);line-height:.82;letter-spacing:-.04em;margin:3vh 0}
+.cover h1 em{font-style:italic;font-weight:800;color:var(--gold)}
+.cover .lines{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem 2rem;margin-top:2rem;border-top:3px solid var(--paper);padding-top:1.4rem}
+.cover .lines a{font-family:var(--serif);font-size:1.35rem;line-height:1.2;text-decoration:none;display:block}
+.cover .lines a span{display:block;font-family:var(--sans);font-weight:900;color:var(--gold);font-size:.95rem;letter-spacing:.12em;margin-bottom:.2rem}
+.cover .lines a:hover{color:var(--gold)}
+.badge{color:var(--rose)}
+
+/* 01 HERO */
+.s1{background:var(--paper)}
+.s1 .num{font-size:clamp(14rem,48vw,46rem);color:transparent;-webkit-text-stroke:3px var(--orange);position:absolute;right:-2vw;top:-4vw;opacity:.9}
+.s1 h2{max-width:11ch;position:relative;font-size:clamp(3.4rem,10vw,10rem)}
+.s1 .dek,.s1 p,.s1 .meta,.s1 .links,.s1 .foryou,.s1 .kicker{position:relative}
+.s1 .kicker{color:var(--orange)}
+.s1 .claims{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:2rem;position:relative;max-width:900px}
+.s1 .claims div{border-top:4px solid var(--ink);padding-top:.7rem;font-weight:500}
+.s1 .claims strong{display:block;font-family:var(--serif);font-weight:900;font-size:2.4rem;line-height:1}
+
+/* 02 ROSE ALERT */
+.s2{background:var(--rose-bg);--bg:var(--rose-bg)}
+.s2 .num{font-size:clamp(10rem,30vw,30rem);color:var(--rose);position:absolute;left:-1vw;bottom:-3vw}
+.s2 .wrap{position:relative;margin-left:auto;max-width:900px}
+.s2 .stamp{position:absolute;top:-1rem;right:0;transform:rotate(9deg);border:6px solid var(--rose);color:var(--rose);font-family:var(--sans);font-weight:900;text-transform:uppercase;letter-spacing:.12em;font-size:clamp(1.4rem,3vw,2.4rem);padding:.4rem 1.2rem;border-radius:10px;background:rgba(255,255,255,.5);box-shadow:inset 0 0 0 3px var(--rose-bg),inset 0 0 0 5px var(--rose)}
+.s2 h2{color:#5a0014;padding-top:4rem}
+.s2 .kicker{color:var(--rose)}
+.s2 ul{margin:1.2rem 0 0 1.2rem;font-size:1.1rem;max-width:56ch}
+.s2 li{margin-top:.4rem}
+.s2 .btn{color:#5a0014}
+
+/* 03 TERMINAL */
+.s3{background:#050805;color:#7dff9f;font-family:var(--mono)}
+.s3 *{font-family:var(--mono)}
+.s3 .num{font-size:clamp(6rem,16vw,14rem);color:#7dff9f;opacity:.95;display:block;margin-bottom:1rem;text-shadow:0 0 22px rgba(125,255,159,.55)}
+.s3 h2{font-weight:700;font-size:clamp(2.2rem,6vw,5.2rem);letter-spacing:-.03em;line-height:1}
+.s3 .dek{font-weight:400;color:#b7ffcb}
+.s3 .term{margin-top:2rem;border:2px solid #7dff9f;border-radius:10px;padding:1.4rem 1.6rem;font-size:1.1rem;line-height:1.7;max-width:760px;background:#0a110b;overflow-x:auto}
+.s3 .term .c{color:#5fb77a}
+.s3 .term .p::before{content:'$ ';color:#ffc857}
+.s3 .kicker{color:#ffc857}
+.s3 p{color:#b7ffcb}
+.s3 .meta{color:#ffc857}
+.s3 .foryou{border-color:#ffc857;color:#ffc857;--bg:#050805}
+.cursor{display:inline-block;width:.6em;height:1.1em;background:#7dff9f;vertical-align:-.2em;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* 04 MIDNIGHT */
+.s4{background:radial-gradient(1200px 700px at 85% 10%,#1a2c68 0%,var(--mid) 60%);color:#e9ecff}
+.s4 .num{font-size:clamp(12rem,38vw,38rem);color:var(--gold);position:absolute;right:2vw;bottom:-6vw;opacity:.95;font-style:italic;font-weight:300}
+.s4 h2{color:#fff;max-width:12ch;position:relative}
+.s4 .kicker{color:var(--gold)}
+.s4 .dek,.s4 p,.s4 .meta,.s4 .links,.s4 .foryou{position:relative}
+.s4 .cves{display:grid;gap:.8rem;margin-top:1.8rem;max-width:720px;position:relative}
+.s4 .cves div{display:flex;gap:1rem;align-items:baseline;border-left:6px solid var(--gold);padding:.3rem 0 .3rem 1rem;font-weight:500;font-size:1.1rem}
+.s4 .cves code{font-family:var(--mono);font-weight:700;color:var(--gold);font-size:1.05rem;white-space:nowrap}
+.s4 .foryou{border-color:var(--gold);color:var(--gold);--bg:var(--mid)}
+
+/* 05 ACADEMIC */
+.s5{background:#fbf7ee;color:#221d18}
+.s5 .page{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:1rem}
+.s5 .num{font-size:clamp(5rem,12vw,10rem);font-weight:300;font-style:italic;color:#8a1c1c;line-height:1}
+.s5 .num sup{font-size:.35em;vertical-align:super}
+.s5 h2{font-weight:600;font-size:clamp(2.6rem,6vw,5.4rem);font-style:italic;line-height:1}
+.s5 .rule{height:6px;border-top:3px solid #221d18;border-bottom:1px solid #221d18;margin:1.2rem 0}
+.s5 .cols{column-count:2;column-gap:3rem;column-rule:1px solid #c9bfae;font-family:var(--serif);font-size:1.2rem;line-height:1.6}
+.s5 .cols p{margin:0 0 1rem;max-width:none;font-size:1.2rem}
+.s5 .cols p:first-child::first-letter{font-family:var(--serif);font-weight:900;font-size:6.6rem;line-height:.78;float:left;padding:.35rem .8rem 0 0;color:#8a1c1c}
+.s5 .fn{border-top:1px solid #221d18;margin-top:1.2rem;padding-top:.8rem;font-family:var(--serif);font-size:1.05rem}
+.s5 .kicker{color:#8a1c1c}
+@media(max-width:800px){.s5 .cols{column-count:1}}
+
+/* 06 SPECIMEN */
+.s6{background:var(--mint)}
+.s6 .num{font-size:clamp(9rem,26vw,26rem);color:#0c5b3a;position:absolute;left:3vw;top:1vw;opacity:.18}
+.s6 .grid{display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:center;position:relative}
+.s6 .specimen{font-family:var(--mono);font-size:clamp(2.6rem,7vw,6.4rem);font-weight:700;line-height:1.1;background:var(--ink);color:var(--mint);padding:2rem;border-radius:20px;letter-spacing:-.02em;transform:rotate(-2deg);box-shadow:14px 14px 0 #0c5b3a}
+.s6 .specimen small{display:block;font-size:1rem;color:var(--gold);margin-top:1rem;letter-spacing:.1em;font-weight:500}
+.s6 .kicker{color:#0c5b3a}
+.s6 .foryou{--bg:var(--mint);color:#0c5b3a}
+@media(max-width:900px){.s6 .grid{grid-template-columns:1fr}}
+
+/* 07 TIMELINE */
+.s7{background:var(--mustard)}
+.s7 .num{font-size:clamp(10rem,30vw,30rem);position:absolute;right:-1vw;top:50%;transform:translateY(-50%);color:var(--ink);opacity:.1}
+.s7 h2{position:relative;max-width:12ch}
+.s7 .tl{position:relative;display:flex;gap:0;margin-top:2.4rem;border-top:6px solid var(--ink);flex-wrap:wrap}
+.s7 .tl div{flex:1 1 150px;padding:1rem 1rem 0 0;font-weight:500}
+.s7 .tl strong{display:block;font-family:var(--serif);font-weight:900;font-size:2.4rem;line-height:1}
+.s7 .dek,.s7 p,.s7 .meta,.s7 .links{position:relative}
+
+/* 08 TRIO */
+.s8{background:var(--lilac)}
+.s8 .num{font-size:clamp(8rem,20vw,20rem);color:#3b1fa8;display:block;margin-bottom:1rem}
+.s8 .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem;max-width:1000px}
+.s8 .trio div{background:#fff;border:4px solid var(--ink);border-radius:14px;padding:1.2rem;font-weight:900;font-size:1.3rem;box-shadow:8px 8px 0 var(--ink)}
+.s8 .trio div:nth-child(2){transform:translateY(18px)}
+.s8 .trio span{display:block;font-weight:500;font-size:1rem;margin-top:.4rem}
+.s8 .kicker{color:#3b1fa8}
+@media(max-width:800px){.s8 .trio{grid-template-columns:1fr}.s8 .trio div:nth-child(2){transform:none}}
+
+/* 09 GRID/ORANGE */
+.s9{background:var(--ink);color:var(--paper)}
+.s9 .num{font-size:clamp(9rem,28vw,28rem);color:var(--orange);position:absolute;right:2vw;top:1vw}
+.s9 h2{position:relative;max-width:13ch}
+.s9 .cells{display:grid;grid-template-columns:repeat(16,1fr);gap:6px;margin-top:2.4rem;max-width:900px;position:relative}
+.s9 .cells i{aspect-ratio:1;background:#2a2622;border-radius:4px;display:block}
+.s9 .cells i.on{background:var(--orange)}
+.s9 .kicker{color:var(--orange)}
+.s9 .dek,.s9 p,.s9 .meta,.s9 .links{position:relative}
+
+/* 10 BIG STAT */
+.s10{background:var(--blue);color:#fff;text-align:left}
+.s10 .num{font-size:clamp(5rem,12vw,10rem);color:var(--gold);margin-bottom:1rem;display:block}
+.s10 .stat{font-family:var(--serif);font-weight:900;font-size:clamp(7rem,30vw,30rem);line-height:.8;letter-spacing:-.05em;font-variation-settings:'opsz' 144}
+.s10 .stat sup{font-size:.28em;vertical-align:top;letter-spacing:0;font-weight:600}
+.s10 .arrow{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(1.6rem,3.4vw,3rem);margin-top:1.2rem}
+.s10 h2{font-size:clamp(2.4rem,5.6vw,5rem);margin-top:2rem;max-width:16ch}
+.s10 .kicker{color:var(--gold)}
+.s10 .foryou{--bg:var(--blue);border-color:var(--gold);color:var(--gold)}
+.s10 .pair{display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.6rem;font-weight:500;font-size:1.15rem}
+.s10 .pair b{font-family:var(--serif);font-size:2.6rem;font-weight:900;display:block;line-height:1}
+
+footer{background:var(--ink);color:var(--paper);padding:clamp(28px,6vw,96px);text-align:center}
+footer .big{font-family:var(--serif);font-weight:900;font-size:clamp(3rem,10vw,9rem);line-height:.9;letter-spacing:-.03em}
+footer .big em{color:var(--gold)}
+footer p{margin:1.4rem auto 0;font-size:1.1rem}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+.lang{position:fixed;top:14px;right:14px;z-index:50;background:#ffc857;color:#14110f;font-weight:900;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:.55rem 1rem;border-radius:999px;border:3px solid #14110f}
+.lang:hover{background:#fff}
+</style>
+<link rel="alternate" hreflang="fr" href="2026-11-27.html">
+</head>
+<body>
+<a class="lang" href="2026-11-27.html" hreflang="fr">Version française →</a>
+
+<!-- COVER -->
+<header class="spread cover">
+  <div class="top"><span>Morning Edition · No. 1</span><span>Friday 27 November 2026</span><span>Curated for DJ Elky</span></div>
+  <h1>Morning<br><em>Edition</em></h1>
+  <p style="font-size:1.4rem;max-width:44ch">Ten stories off the Hacker News front page, picked for AI tools, dev tools, creative software, privacy and weird science. No ads, no business fluff, one sound check per story.</p>
+  <nav class="lines" aria-label="Today's stories">
+    <a href="#s1"><span>01</span>AI is suddenly doing real mathematics</a>
+    <a href="#s2"><span class="badge">02 · ALERT</span>1Password's breach: vaults safe, phishing incoming</a>
+    <a href="#s3"><span>03 · FOR YOU</span>Postgres in one binary, no Docker</a>
+    <a href="#s4"><span>04 · FOR YOU</span>Ubuntu's slow kernel patches</a>
+    <a href="#s5"><span>05</span>Why your phone lens is a physics miracle</a>
+    <a href="#s6"><span>06 · FOR YOU</span>Intel One Mono, a font for your IDE</a>
+    <a href="#s7"><span>07</span>80 UI style guides, 1980 to today</a>
+    <a href="#s8"><span>08</span>Three Linux browsers in one tab</a>
+    <a href="#s9"><span>09</span>Models vs Google's code golfers</a>
+    <a href="#s10"><span>10 · FOR YOU</span>AMD GPU: local LLMs up to 86% faster</a>
+  </nav>
+</header>
+
+<!-- 01 HERO -->
+<section class="spread s1" id="s1">
+  <div class="num" aria-hidden="true">01</div>
+  <div class="kicker">Big Brains · 1,899 points on HN</div>
+  <h2>The robots are doing maths now.</h2>
+  <div class="dek">Scott Aaronson says a wave of AI-generated results just changed theoretical computer science.</div>
+  <p>In a post that took over the front page, Aaronson reacts to a pile of claimed proofs from OpenAI, Anthropic, Google and others, several backed by Lean certificates. His read: AI is now climbing towards P ≠ NP, and a proof may not be far off.</p>
+  <div class="claims">
+    <div><strong>VP ≠ VNP</strong>Claimed by both OpenAI and Anthropic.</div>
+    <div><strong>ω = 9/4</strong>OpenAI's claimed matrix multiplication exponent.</div>
+    <div><strong>N·√log N</strong>Claimed Fourier transform gate count, beating the FFT.</div>
+  </div>
+  <p>These are claims in a blog post, not peer review. Aaronson himself says full human understanding could take years.</p>
+  <div class="meta"><span>1,738 comments</span><span>scottaaronson.blog</span></div>
+  <div class="links"><a class="btn" href="https://scottaaronson.blog/?p=10379">Read the post</a><a class="btn" href="https://news.ycombinator.com/item?id=50646108">HN thread</a></div>
+</section>
+
+<!-- 02 ROSE ALERT -->
+<section class="spread s2" id="s2">
+  <div class="num" aria-hidden="true">02</div>
+  <div class="wrap">
+    <div class="stamp">Security alert</div>
+    <div class="kicker">Privacy · 1,613 points</div>
+    <h2>1Password got breached. Your vault didn't.</h2>
+    <div class="dek">An attacker got into an employee's GitHub account and pushed malicious code to backend services.</div>
+    <ul>
+      <li>Names, sign-in emails, user IDs, public keys and some invitation or recovery tokens were exposed for a subset of users.</li>
+      <li>Vault contents, the keys protecting them and the apps were not touched, says 1Password.</li>
+      <li>No action required, but expect phishing about invitations or account recovery. They will never ask for your password or Secret Key.</li>
+    </ul>
+    <div class="foryou"><b><span>Applies to you?</span></b>If you or a client use 1Password: treat any "account recovery" email this week as hostile, and report it to support@1password.com.</div>
+    <div class="meta"><span>696 comments</span><span>1password.com</span></div>
+    <div class="links"><a class="btn" href="https://1password.com/blog/update-on-nov-2026-security-incident">Read the update</a><a class="btn" href="https://news.ycombinator.com/item?id=50644817">HN thread</a></div>
+  </div>
+</section>
+
+<!-- 03 TERMINAL -->
+<section class="spread s3" id="s3">
+  <div class="num" aria-hidden="true">03_<span class="cursor"></span></div>
+  <div class="kicker">Dev tools · 264 points</div>
+  <h2>minipg: PostgreSQL as a single executable.</h2>
+  <div class="dek">No server to configure, no Docker. One folder holds the whole database.</div>
+  <div class="term">
+    <div class="c"># a .pgdb folder = data + config + Postgres version</div>
+    <div class="p">minipg app.pgdb "select 1"</div>
+    <div class="p">minipg run app.pgdb -- npm start</div>
+    <div class="p">minipg run test.pgdb -- go test ./...</div>
+    <div class="c"># server starts on demand, stops when idle</div>
+  </div>
+  <p>It embeds the postgres:18-alpine image and runs it in a tiny machine, so tools like psql start in about 90 ms. Runs on Linux and Apple Silicon.</p>
+  <p>Caveat from the author: it is early, about 2x slower than native, and not for data you can't recreate.</p>
+  <div class="foryou"><b><span>For you</span></b>Ideal for disposable Postgres in Java integration tests or CI. Swap the `go test` line for `mvn test` and try it.</div>
+  <div class="meta"><span>42 comments</span><span>progrium.github.io</span></div>
+  <div class="links"><a class="btn" href="https://progrium.github.io/minipg/">Open minipg</a><a class="btn" href="https://news.ycombinator.com/item?id=50650892">HN thread</a></div>
+</section>
+
+<!-- 04 MIDNIGHT -->
+<section class="spread s4" id="s4">
+  <div class="num" aria-hidden="true">04</div>
+  <div class="kicker">Security · 398 points</div>
+  <h2>Ubuntu is late with kernel fixes.</h2>
+  <div class="dek">Hanno Böck wants severe kernel patches in hours. Ubuntu, he says, is taking days or weeks.</div>
+  <div class="cves">
+    <div><code>CVE-2026-99288</code>Remote TCP memory corruption, no Ubuntu fix 9 days after publication.</div>
+    <div><code>CVE-2026-99312</code>KVM host escape on AMD, still unfixed on Ubuntu.</div>
+    <div><code>CVE-2026-98432</code>Took Ubuntu weeks, possibly exploited in the wild.</div>
+  </div>
+  <p>His deeper point is that backporting patches onto an old kernel is fragile, and he prefers distros that track longterm kernels.</p>
+  <div class="foryou"><b><span>For you</span></b>Running Ubuntu servers or a Java box on one? Check your kernel version and watch for updates to the TCP fix.</div>
+  <div class="meta"><span>241 comments</span><span>openwall.com</span></div>
+  <div class="links"><a class="btn" href="https://www.openwall.com/lists/oss-security/2026/11/25/9">Read the post</a><a class="btn" href="https://news.ycombinator.com/item?id=50647181">HN thread</a></div>
+</section>
+
+<!-- 05 ACADEMIC -->
+<section class="spread s5" id="s5">
+  <div class="page">
+    <div class="num">№ 5<sup>†</sup></div>
+    <div class="kicker">Weird science · 26 points</div>
+    <h2>The Engineering of Smartphone Cameras</h2>
+    <div class="rule"></div>
+    <div class="cols">
+      <p>A DSLR lens is typically 50 to 150 millimetres long. The lens in your phone lives in roughly eight, with the sensor less than ten millimetres behind the first optical surface. Everything else in this essay follows from that constraint.</p>
+      <p>Plastic lenses make field curvature hard to fix, because the Petzval sum depends on element power and refractive index, and plastics offer very few indices to choose from. Aspheres cannot change it. That is why some designs sneak in a glass element or a rare in-between plastic.</p>
+      <p>The 5x telephoto cheats the geometry: its focal length is about 17 mm, folded through a rhomboid prism so light bounces four times. Moulded aspheres hold form errors near a tenth of a micron, yet are touchier about tilt and decentre.</p>
+    </div>
+    <div class="fn">† 5x module ≈ 120 mm equivalent, 20° field of view. Ultra-wide ≈ 13 mm, 120°.</div>
+    <div class="meta"><span>11 comments</span><span>pencilofrays.com</span></div>
+    <div class="links"><a class="btn" href="https://www.pencilofrays.com/smartphone-lens/">Read the essay</a><a class="btn" href="https://news.ycombinator.com/item?id=50644839">HN thread</a></div>
+  </div>
+</section>
+
+<!-- 06 SPECIMEN -->
+<section class="spread s6" id="s6">
+  <div class="num" aria-hidden="true">06</div>
+  <div class="grid">
+    <div>
+      <div class="kicker">Creative · dev tools · 382 points</div>
+      <h2>A free font built for tired eyes.</h2>
+      <div class="dek">Intel One Mono, designed with Frere-Jones Type and tested with low-vision and blind developers.</div>
+      <p>Four weights with italics, over 200 Latin languages, programming ligatures behind a stylistic set, and open-source under the SIL OFL.</p>
+      <div class="foryou"><b><span>For you</span></b>In IntelliJ: File, Settings, Editor, Font. Pick "Intel One Mono" and judge it on a real Java file.</div>
+      <div class="meta"><span>214 comments</span><span>github.com/intel</span></div>
+      <div class="links"><a class="btn" href="https://github.com/intel/intel-one-mono">Get the font</a><a class="btn" href="https://news.ycombinator.com/item?id=50653667">HN thread</a></div>
+    </div>
+    <div class="specimen" aria-hidden="true">{ 0O 1lI } =&gt;<small>CAN YOU TELL THEM APART?</small></div>
+  </div>
+</section>
+
+<!-- 07 TIMELINE -->
+<section class="spread s7" id="s7">
+  <div class="num" aria-hidden="true">07</div>
+  <div class="kicker">Creative software · 354 points</div>
+  <h2>Every UI rulebook, preserved.</h2>
+  <div class="dek">Marcin Wichary's collection of about 80 interface guidelines, from Apple's Lisa to today.</div>
+  <div class="tl">
+    <div><strong>1980</strong>Apple Lisa, the earliest entry</div>
+    <div><strong>~80</strong>documents, many as PDF</div>
+    <div><strong>CDE · BeOS · Newton</strong>Unix desktops, BeOS (never finished) and PDAs</div>
+    <div><strong>Today</strong>iOS, Android, Windows</div>
+  </div>
+  <p>Pure inspiration for anyone building creative tools or audio software interfaces. Zip download included.</p>
+  <div class="meta"><span>72 comments</span><span>aresluna.org</span></div>
+  <div class="links"><a class="btn" href="https://aresluna.org/ui-style-guides/">Browse the archive</a><a class="btn" href="https://news.ycombinator.com/item?id=50649834">HN thread</a></div>
+</section>
+
+<!-- 08 TRIO -->
+<section class="spread s8" id="s8">
+  <div class="num" aria-hidden="true">08</div>
+  <div class="kicker">Weird web · Show HN · 67 points</div>
+  <h2>Three browsers. One tab. Zero installs.</h2>
+  <div class="dek">"Side by Side" loads the same URL in three browsers at once, each running in a Linux VM inside your tab.</div>
+  <div class="trio">
+    <div>Firefox<span>Linux VM</span></div>
+    <div>Chromium<span>Linux VM</span></div>
+    <div>Epiphany<span>Linux VM</span></div>
+  </div>
+  <p style="margin-top:2.6rem">Handy for cross-browser checks of your own web pages without leaving the page. The site doesn't say how the virtualization works, so I can't tell you how fast it runs.</p>
+  <div class="meta"><span>18 comments</span><span>michidk.github.io</span></div>
+  <div class="links"><a class="btn" href="https://michidk.github.io/sidebyside/">Try it</a><a class="btn" href="https://news.ycombinator.com/item?id=50656036">HN thread</a></div>
+</section>
+
+<!-- 09 GRID -->
+<section class="spread s9" id="s9">
+  <div class="num" aria-hidden="true">09</div>
+  <div class="kicker">AI tools · 455 points</div>
+  <h2>Code golf: frontier models vs Google's 2015 golfers.</h2>
+  <div class="dek">A benchmark of 32 problems across 8 languages. HN says GPT-6.2 Astra is the first to beat the Googlers' records.</div>
+  <div class="cells" aria-hidden="true" id="cells"></div>
+  <p>256 cells, one per problem and language. The leaderboard loads with JavaScript, so I couldn't verify the numbers. Check the page before quoting the headline.</p>
+  <div class="meta"><span>128 comments</span><span>bjin.github.io</span></div>
+  <div class="links"><a class="btn" href="https://bjin.github.io/go-codegolf-benchmark/#leaderboard">Open the leaderboard</a><a class="btn" href="https://news.ycombinator.com/item?id=50601280">HN thread</a></div>
+</section>
+
+<!-- 10 BIG STAT -->
+<section class="spread s10" id="s10">
+  <div class="num" aria-hidden="true">10</div>
+  <div class="kicker">AI tools · local LLMs · 92 points</div>
+  <div class="stat">+86<sup>%</sup></div>
+  <div class="arrow">prefill speed, 700 to 1,300 tokens per second</div>
+  <h2>AMD-specific patches make llama.cpp fly.</h2>
+  <div class="pair">
+    <div><b>35 → 55</b>tokens/s generating, +57%</div>
+    <div><b>1 card</b>tested: an AMD R9700 in an eGPU</div>
+  </div>
+  <p>The author's numbers are for one setup running a 27B model, "YMMV". They ran a pre-built ROCm container with Podman instead of building from source.</p>
+  <div class="foryou"><b><span>For you</span></b>If your Radeon is idle during local LLM work, the Podman command on the page is a 5-minute experiment.</div>
+  <div class="meta"><span>28 comments</span><span>devnull.land</span></div>
+  <div class="links"><a class="btn" href="https://devnull.land/amd-specific-llama-cpp">Read the write-up</a><a class="btn" href="https://news.ycombinator.com/item?id=50657265">HN thread</a></div>
+</section>
+
+<footer>
+  <div class="big">That's a <em>wrap.</em></div>
+  <p>Morning Edition No. 1 · Friday 27 November 2026. Next set drops tomorrow at 7:00 Paris time. 🎧</p>
+</footer>
+
+<script>
+(function(){
+  var c=document.getElementById('cells');if(!c)return;
+  var h='';for(var i=0;i<256;i++){h+='<i'+(i%7===0||i%11===3?' class="on"':'')+'></i>';}
+  c.innerHTML=h;
+})();
+</script>
+</body>
+</html>
