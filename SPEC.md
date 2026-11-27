@@ -21,4 +21,4 @@ Owner: DJ Elky (Java developer, DJ). Timezone Europe/Paris. Runs daily at 07:00.
 - Then run `python3 scripts/build_index.py`, commit (`Morning Edition YYYY-MM-DD`), push to `main`.
 
 ## URL
-https://dadoonet.github.io/morning-edition/magazines/YYYY-MM-DD.html
+https://david.pilato.fr/morning-edition/magazines/YYYY-MM-DD.html  (dadoonet.github.io redirects there: custom domain)
